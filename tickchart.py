@@ -22,7 +22,6 @@ tickers = input_string.split()
 
 stocks = [tickers]
 
-'''
 sd_date_entry = input('Enter a start date in YYYY-MM-DD format: ')
 sd_year, sd_month, sd_day = map(int, sd_date_entry.split('-'))
 sd_date1 = dt.date(sd_year, sd_month, sd_day)
@@ -30,20 +29,14 @@ sd_date1 = dt.date(sd_year, sd_month, sd_day)
 ed_date_entry = input('Enter a end date in YYYY-MM-DD format: ')
 ed_year, ed_month, ed_day = map(int, ed_date_entry.split('-'))
 ed_date1 = dt.date(ed_year, ed_month, ed_day)
+
 '''
+
 #temporary date range for quicker testing
 sd_date1 = dt.date(2020, 1, 1)
 ed_date1 = dt.date(2023, 12, 31)
 
-
 '''
-for ticker in tickers:
-    stocktick = yf.Ticker(stocks)
-companyname = stocktick.info['longName']
-
-print(companyname + " data loading...")
-'''
-
 
 df = pd.DataFrame()
 for ticker in tickers:
